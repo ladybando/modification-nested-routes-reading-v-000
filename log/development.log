@@ -4100,3 +4100,22 @@ Processing by PostsController#edit as HTML
   Rendered posts/_form.html.erb (1.5ms)
   Rendered posts/edit.html.erb within layouts/application (2.6ms)
 Completed 200 OK in 32ms (Views: 24.5ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/posts/17" for 108.6.226.64 at 2019-02-13 02:54:17 +0000
+Cannot render console from 108.6.226.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uqwk9yQM1bE3bEYivOfytDc+a9R0YWcndLNNvY/dfoXhhr+E90faTQuR/dcY5KIv9SZHs1AUYk2GefrxZpqAJQ==", "post"=>{"author_id"=>"5", "title"=>"Title", "description"=>"new new"}, "commit"=>"Update Post", "id"=>"17"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["description", "new new"], ["updated_at", "2019-02-13 02:54:17.489086"], ["id", 17]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.81.218:33226/posts/17
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/17" for 108.6.226.64 at 2019-02-13 02:54:17 +0000
+Cannot render console from 108.6.226.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 17]]
